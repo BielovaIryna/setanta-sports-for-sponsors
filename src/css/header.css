@@ -1,0 +1,110 @@
+.top{
+	
+	width: 100%;
+	padding-top: 20px;
+    padding-bottom: 14px;
+	background-image: linear-gradient(360deg, rgba(17,17,17,0.38623371711966037) 0%, rgba(0,0,0,0.5010796554950105) 79%);
+	z-index: 200;
+}
+.top-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+      
+    
+}
+.top-logo-img{
+width: 100px;
+height: 50px;
+}
+
+.top-nav, .top-sm-list{
+    display: none;
+}
+.mobile-menu-open-btn{
+    background-color: inherit;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	   
+}
+.mobile-menu-icon-mob{
+    stroke: var(--white-color);
+    
+}
+.mobile-menu-icon-tablet{
+    display: none;
+}
+.contact-us{
+	background-color: var(--yellow-color);
+	border-radius: 40px;
+	width: 110px;
+	height: 40px;
+	text-transform: uppercase; 
+	font-size: var(--button-text-font-size);
+	font-weight: var(--button-text-font-weight);
+	line-height: var(--button-text-line-height);
+	letter-spacing: var(--button-text-letter-spacing);
+
+
+}
+
+@media screen  and (min-width:768px){
+	.top{
+		padding-top: 24px;
+		padding-bottom: 24px;
+	}
+    .mobile-menu-icon-mob{
+		display: none;
+	}
+	.mobile-menu-icon-tablet{
+		display: block;
+		stroke: var(--white-color);
+	}
+	.mobile-menu-open-btn{
+		width: 32px;
+    	height: 32px;
+	}
+	.top-logo-img{
+		width: 120px;
+		
+		}
+}
+@media screen and (min-width:1200px) {
+	.top{
+		padding-bottom: 32px;
+	}
+	
+	.mobile-menu-open-btn{
+		display: none;
+	}
+	.top-nav{
+		display: block;
+		margin-left: auto;
+		margin-right: 137px;
+	}
+	.top-nav-list{
+		display: flex;
+		align-items: center;
+		gap: 24px;
+		font-size: var(--body-font-size);
+		font-weight: var(--body-font-weight);
+		line-height: var(--body-line-heightt);
+		letter-spacing: var(--body-letter-spacing);
+		color: var(--white-color);
+		text-transform:uppercase;
+		transition: color var(--transition);
+
+	}
+	.top-nav-link:hover, .top-nav-link:focus{
+		
+		color: var(--yellow-color);
+	}
+	.top-logo-img{
+		width: 150px;
+		}
+
+}
+

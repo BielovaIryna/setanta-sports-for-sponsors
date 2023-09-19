@@ -1,0 +1,64 @@
+<div class="backdrop is-hidden" data-modal>
+	<div class="modal-contact-us">
+	  <button class="contact-us-close-btn" type="button" data-modal-close>
+		<svg class="contact-us-close-icon" width="14" height="14">
+		  <use href="./img/sprite.svg#icon-x-close"></use>
+		</svg>
+	  </button>
+	  <form class="contact-form">
+		<label class="contact-form-label">
+		  <span class="contact-form-field-desc">Імʼя*</span>
+		  <span class="contact-form-input-wrapper">
+			<input
+			  class="contact-form-input user-name"
+			  type="text"
+			  id="user-name"
+			  name="user-name"
+			  required
+			  pattern="^[a-zA-Z]+$"
+			  minlength="2"
+			  placeholder="Імʼя"
+			  title="Будь-ласка введіть Ваше Імʼя"
+			/>
+		  </span>
+		</label>
+		<label class="contact-form-label">
+		  <span class="contact-form-field-desc">Телефон*</span>
+		  <span class="contact-form-input-wrapper">
+			<input
+			  class="contact-form-input"
+			  type="tel"
+			  name="user-tel"
+			  required
+			  pattern="[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+			  placeholder="Номер телефону"
+			  title="Введіть номер телефону у форматі xx-xxx-xx-xx"
+			/>
+		  </span>
+		</label>
+		<label class="contact-form-label">
+		  <span class="contact-form-field-desc">Електронна пошта*</span>
+		  <span class="contact-form-input-wrapper">
+			<input
+			  lang="en"
+			  class="contact-form-input"
+			  type="email"
+			  id="user-email"
+			  name="user-email"
+			  required
+			  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+			  placeholder="Електронна пошта"
+			  title="Приклад: example@gmail.com"
+			/>
+		  </span>
+		</label>
+		<button
+		  type="submit"
+		  class="contact-form-submit-btn button"
+		  data-modal-close
+		>
+		  надіслати
+		</button>
+	  </form>
+	</div>
+  </div>

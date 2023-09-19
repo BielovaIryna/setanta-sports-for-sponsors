@@ -1,0 +1,88 @@
+:root {
+	--black-color: #000000;
+	--white-color: #ffffff;
+	--yellow-color: #FFD106;
+	--placeholderr-color: #818a99;
+	--dark-background-color:#1E1E1E;
+	--medium-background-color:#E0E0E0;
+	--light-background-color:#F4F4F4;
+	--font-family: "Noto Sans";
+	--title-font-size: 25px;
+	--title-font-weight: 700;
+	--title-letter-spacing: 0.02em;
+	--title-line-height: 1.07;
+	--second-title-font-size: 20px;
+	--second-title-font-weight: 700;
+	--second-title-letter-spacing: 0.02em;
+	--second-title-line-height: 1.1;
+	--third-title-font-size: 20px;
+	--third-title-font-weight: 500;
+	--third-title-letter-spacing: 0.02em;
+	--third-title-line-height: 1.2;
+	--body-font-size: 16px;
+	--body-font-weight: 400;
+	--body-letter-spacing: 0.02em;
+	--body-line-height: 1.5;
+	--small-text-font-size: 10px;
+	--small-text-font-weight: 400;
+	--small-text-letter-spacing: 0.04em;
+	--small-text-line-height: 1.17;
+	--body-medium-font-size: 16px;
+	--body-medium-font-weight: 500;
+	--body-medium-letter-spacing: 0.02em;
+	--body-medium-line-height: 1.5;
+	--button-text-font-size: 12px;
+	--button-text-font-weight: 600;
+	--button-text-letter-spacing: 0.02em;
+	--button-text-line-height: 1.5;
+	--link-text-font-size: 12px;
+	--link-text-font-weight: 400;
+	--link-text-letter-spacing: 0.04em;
+	--link-text-line-height: 1.33;
+	--link-text-decoration: underline;
+	--transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+body {
+	font-family: var(--font-family);
+	background-color: var(--black-color);
+	color: var(--white-color)
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+@media screen and (min-width: 375px) {
+	.container {
+		width: 375px;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+@media screen and (min-width: 768px) {
+	.container {
+		width: 768px;
+		padding-left: 32px;
+		padding-right: 32px;
+	}
+}
+@media screen and (min-width: 1200px) {
+	.container {
+		width: 1200px;
+	}
+}
+@media screen and (max-width: 374px) {
+	.container {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
