@@ -103,8 +103,7 @@
 	color:var(--yellow-color)
   }
   .audience-back-diagram{
-	width:100%;
-	height: auto;
+	width:300px;
 	margin: 0 auto;
 
   }

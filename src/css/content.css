@@ -103,6 +103,7 @@ margin: 0 auto 20px auto;
 } 
 .content-slider-img{
 	border-radius: 40px;
+	width: 100%;
 	
 }
 .content-slider-overlay{
@@ -117,12 +118,11 @@ margin: 0 auto 20px auto;
 	display: flex;
 	justify-content: end;
 	align-items: end;
-	padding: 20px;
 }
 .content-slider-overlay-img{
 	max-height: 50px;
 	max-width: 100px;
-	
+	padding: 20px;
 }
 
 @media screen and (min-width: 768px){
