@@ -103,6 +103,9 @@
   color: var(--yellow-color);
 }
 .audience-back-diagram {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 100%;
   max-height: 200px;
   z-index: 1;
