@@ -51,6 +51,7 @@
   height: 270px;
   width: 100%;
   max-width: 335px;
+  margin-bottom: 10px;
 }
 .audience-item .front-a,
 .audience-item .back-a {
@@ -109,4 +110,19 @@
   max-width: 100%;
   max-height: 200px;
   z-index: 1;
+}
+@media screen and (min-width:768px){
+  .audience-list{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+  }
+  .audience-item{
+    max-width: calc((100%-10px)/2);
+    width: calc((100%-10px)/2);
+    margin-bottom: 0;
+    
+  }
 }

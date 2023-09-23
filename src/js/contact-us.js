@@ -1,24 +1,25 @@
-import * as basicLightbox from 'basiclightbox';
-const contactUsOpenBtn = document.querySelector(".contact-us");
-const contactUsSubmitBtn = document.querySelector(".contact-form-submit-btn");
-const contacUsClose = document.querySelector("[data-modal-close]");
-const contactUsEl = document.querySelector("[data-modal]")
-console.log(contactUsOpenBtn);
-
-const contactUsClickOpen = () => {
-	const contactUsBox = basicLightbox.create(contactUsEl.classList.toggle("is-hidden"));
-	contactUsBox.show();
-	contactUsOpenBtn.removeEventListener("click", contactUsClickOpen);
-	const contactUsEscClose = (event) => {
-		if (event.key === "Escape") {
-			contactUsEl.classList.toggle("is-hidden");
-			document.removeEventListener("keydown", contactUsEscClose)
-		}
-		document.addEventListener("keydown", contactUsEscClose)
+(() => {
+	const bodyScrollLock = require('body-scroll-lock');
+		const disableBodyScroll = bodyScrollLock.disableBodyScroll;
+    const enableBodyScroll = bodyScrollLock.enableBodyScroll;
+	const refs = {
+	  openModalBtn: document.querySelectorAll('[data-modal-open]'),
+	  closeModalBtn: document.querySelector('[data-modal-close]'),
+	  modal: document.querySelector('[data-modal]'),
+	};
+	refs.openModalBtn.forEach(el => {
+	  el.addEventListener('click', toggleModal);
+	  
+	});
+	refs.closeModalBtn.addEventListener('click', toggleModal);
+	function toggleModal() {
+	  refs.modal.classList.toggle('is-hidden');
+	  document.body.classList.toggle("no-scroll");
+	
+	  if(refs.modal.classList.contains('is-hidden')){
+		enableBodyScroll(document.body);
+	  } else{disableBodyScroll(document.body)}
+		
+	
 	}
-}
-const contactUsClickClose = () => {
-	contactUsEl.classList.toggle("is-hidden");
-}
-contactUsOpenBtn.addEventListener("click", contactUsClickOpen);
-contacUsClose.addEventListener("click", contactUsClickClose)
+  })();

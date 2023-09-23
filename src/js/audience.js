@@ -78,5 +78,3 @@ const createRadarChart = (dataInf, canvas) => {
 createRadarChart(ott, canvasOtt);
 createRadarChart(youtube, canvasYoutube);
 createRadarChart(smm, canvasSmm)
-
-

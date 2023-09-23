@@ -1,29 +1,31 @@
-import * as basicLightbox from 'basiclightbox';
-const mobMenuOpen = document.querySelector(".js-open-menu");
-const mobMenuEl = document.querySelector(".js-menu-container");
-const mobMenuClose=document.querySelector(".js-close-menu");
-
-
-const mobMenuClickOpen =()=>{
-const headerMobMenuBox = basicLightbox.create(mobMenuEl.classList.toggle("is-open"));
-headerMobMenuBox.show()
-mobMenuOpen.removeEventListener("click", handlerClickClose);
-const mobMenuCloseEsc =(event)=>{
-	if(event.key === "Escape"){
-		mobMenuEl.classList.toggle("is-open");
-		headerMobMenuBox.close();
-		document.removeEventListener("keydown", mobMenuCloseEsc);
-	}
-	
-}
-document.addEventListener("keydown", mobMenuCloseEsc);
-}
-
-const mobMenuClickClose =()=>{
-	mobMenuEl.classList.toggle("is-open");
-	headerMobMenuBox.close()
-
-	mobMenuClose.removeEventListener("click", mobMenuClickClose)
-}
-mobMenuOpen.addEventListener("click", mobMenuClickOpen)
-mobMenuClose.addEventListener("click", mobMenuClickClose)
+(() => {
+	const mobileMenu = document.querySelector('.js-menu-container');
+	const openMenuBtn = document.querySelector('.js-open-menu');
+	const closeMenuBtn = document.querySelector('.js-close-menu');
+	const bodyScrollLock = require('body-scroll-lock');
+		const disableBodyScroll = bodyScrollLock.disableBodyScroll;
+    const enableBodyScroll = bodyScrollLock.enableBodyScroll;
+	const toggleMenu = () => {
+	  const isMenuOpen =
+		openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
+	  openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
+	  mobileMenu.classList.toggle('is-open');
+     
+	  const scrollLockMethod = !isMenuOpen
+		? disableBodyScroll(document.body)
+		:  enableBodyScroll(document.body);
+	//   bodyScrollLock[scrollLockMethod](document.body);
+	};
+  
+	openMenuBtn.addEventListener('click', toggleMenu);
+	closeMenuBtn.addEventListener('click', toggleMenu);
+  
+	// Close the mobile menu on wider screens if the device orientation changes
+	window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
+	  if (!e.matches) return;
+	  mobileMenu.classList.remove('is-open');
+	  openMenuBtn.setAttribute('aria-expanded', false);
+	  enableBodyScroll(document.body);
+	});
+  })();
+  
