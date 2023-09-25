@@ -120,9 +120,18 @@
    
   }
   .audience-item{
-    max-width: calc((100%-10px)/2);
-    width: calc((100%-10px)/2);
+    max-width: calc((100% - 10px)/2);
+    width: calc((100% - 10px)/2);
     margin-bottom: 0;
     
   }
+  .audience{
+    padding-top: 50px;
+		padding-bottom: 50px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .audience-item{
+  max-width: calc((100% - 10px*3)/4);
+  width: calc((100% - 10px*3)/4);}
 }

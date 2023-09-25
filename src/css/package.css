@@ -1,0 +1,101 @@
+.packege-section {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.packege-title {
+	width: 300px;
+	text-align: center;
+	margin: 0 auto 20px auto;
+	font-weight: var(--third-title-font-weight);
+	font-size: var(--third-title-font-size);
+	line-height: var(--third-title-line-height);
+	letter-spacing: var(--third-title-letter-spacing);
+	text-transform: uppercase;
+	color: var(--yellow-color);
+}
+
+.sports-list {
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-bottom: 10px;
+}
+.sports-item {
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+.sports-item-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border:
+		1px solid,
+		var(--yellow-color);
+	border-radius: 40px;
+	background-color: var(--white-color);
+	width: 120px;
+	height: 50px;
+
+	color: var(--black-color);
+	
+	text-align: center;
+	font-weight: var(--button-text-font-weight);
+	font-size: var(--button-text-font-size);
+	line-height: var(--button-text-line-height);
+	letter-spacing: var(--button-text-letter-spacing);
+	text-transform: uppercase;
+}
+.packege-wrapper {
+	display: flex
+}
+.package-left {
+	display: flex;
+    align-items:flex-end;
+    width: 100px;
+    padding-left: 26px;
+    padding-bottom: 40px;
+  
+}
+.packege-name-list{
+	transform: rotate(-90deg) translateX(-25%);
+    transform-origin: 0 0;
+	display: flex;
+    align-items: center;
+    column-gap: 40px;
+}
+.packege-name-btn{
+	background-color: inherit;
+	color: var(--white-color);
+	font-weight: var(--button-text-font-weight);
+	font-size: var(--button-text-font-size);
+	line-height: var(--button-text-line-height);
+	letter-spacing: var(--button-text-letter-spacing);
+	text-transform: uppercase;
+	padding: 20px;
+}
+.packege-name-btn:active{
+	background-color: aqua;
+	border-radius: 0 20px 0 0;
+}
+.packege-info-item:not(:last-child){
+	margin-bottom: 10px;
+}
+.packege-info{
+	background-color: aquamarine;
+}
+.packege-info-item{
+	background-color: inherit;
+	font-weight: var(--body-font-weight);
+    font-size: var(--body-font-size);
+    line-height: var(--body-line-height);
+    letter-spacing: var(--body-letter-spacing);
+}
+
+
+
+
