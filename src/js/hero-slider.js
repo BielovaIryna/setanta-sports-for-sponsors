@@ -9,7 +9,7 @@ const heroSwiper = new Swiper (heroSwiperEl,{
 	//autoplay не працює????
 	autoplay:{
 		delay:2000,
-		disableOnInteraction:false,
+		// disableOnInteraction:false,
 		
 	 },
 
@@ -31,6 +31,14 @@ const heroSwiper = new Swiper (heroSwiperEl,{
     1200: {
       slidesPerView: 8,
       spaceBetween: 5
+    },
+    on:{
+      init:function(){
+        console.log("Swiper initialization");
+      },
+      slideChange:function(){
+        console.log("Slide change");
+      }
     }
   },
   

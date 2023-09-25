@@ -82,11 +82,15 @@
 	background-color: aqua;
 	border-radius: 0 20px 0 0;
 }
+.packege-name-btn:active .packege-wrapper{
+	background-color: aqua;
+}
+
 .packege-info-item:not(:last-child){
 	margin-bottom: 10px;
 }
 .packege-info{
-	background-color: aquamarine;
+	background-color: inherit;
 }
 .packege-info-item{
 	background-color: inherit;
