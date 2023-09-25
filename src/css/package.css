@@ -21,29 +21,20 @@
 	justify-content: center;
 	margin-bottom: 10px;
 }
+
 .sports-item {
-	
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-wrap: wrap;
-	gap: 10px;
-}
-.sports-item-btn {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border:
-		1px solid,
-		var(--yellow-color);
+	border: 2px solid var(--yellow-color) ;
 	border-radius: 40px;
-	background-color: var(--white-color);
 	width: 120px;
 	height: 50px;
-
-	color: var(--black-color);
 	
-	text-align: center;
+}
+.sports-item-btn {
+	background-color: inherit;
+	color: var(--white-color);
 	font-weight: var(--button-text-font-weight);
 	font-size: var(--button-text-font-size);
 	line-height: var(--button-text-line-height);
@@ -55,14 +46,12 @@
 }
 .package-left {
 	display: flex;
-    align-items:flex-end;
+    align-items:center;
     width: 100px;
-    padding-left: 26px;
-    padding-bottom: 40px;
   
 }
 .packege-name-list{
-	transform: rotate(-90deg) translateX(-25%);
+	transform: rotate(-90deg) translateX(-20%);
     transform-origin: 0 0;
 	display: flex;
     align-items: center;
@@ -98,7 +87,19 @@
     font-size: var(--body-font-size);
     line-height: var(--body-line-height);
     letter-spacing: var(--body-letter-spacing);
+	display: flex;
+	gap: 20px;
+	align-items: center;
 }
+.packege-svg{
+	fill: var(--yellow-color);
+	width: 50px;
+	height: 50px;
+}
+.package-text span{
+	color: var(--yellow-color);
+}
+
 
 
 
